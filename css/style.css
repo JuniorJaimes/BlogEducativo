@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos Generales*/
+h2 {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(42, 164, 221);
+}
+
+h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: rgb(24, 127, 175);
+}
+
+p {
+    text-indent: 20px;
+}
+
+img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d8d5d5;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.header {
+    margin-top: 8px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: url(../assets/HeaderImg.jpg) no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        /* Oscurece la imagen, ajusta la opacidad si es necesario */
+        z-index: 1;
+    }
+
+    p {
+        font-family: "Roboto", serif;
+        position: relative;
+        z-index: 2;
+        color: #d8d5d5;
+        font-size: 1.6rem;
+        margin-bottom: 4px;
+
+
+    }
+
+    h1 {
+
+        position: relative;
+        z-index: 2;
+        color: #e9e6e6;
+        font-size: 6.2rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 500;
+        margin-top: 0;
+        border: 0.1px solid #e9e6e6;
+        padding: 0 8px;
+
+
+    }
+    
+
+    h3 {
+        font-family: "Roboto", serif;
+        position: absolute;
+        z-index: 2;
+        color: #d8d5d5;
+        bottom: 12%;
+        right: 30%;
+        letter-spacing: 1px;
+
+        animation: show-title linear both;
+        animation-timeline: scroll;
+        animation-range: 0 250px;
+
+        span {
+            color: rgb(42, 164, 221);
+            font-size: 1.4rem;
+        }
+    }
+
+}
+
+.indice {
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0ebeb;
+    border-radius: 10px;
+
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.3rem;
+
+    }
+
+    .links_indice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        width: 90%;
+        height: 80%;
+
+
+
+        .links {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+
+
+                li {
+                    display: flex;
+                    justify-content: start;
+                    margin-top: 20px;
+                    margin-left: 60px;
+
+
+                    a {
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                        color: #242323;
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+.contenido {
+    width: 100%;
+    background-color: #f0ebeb;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .tema {
+        width: 90%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-top: 4px;
+
+
+        .container__description {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+
+
+
+
+
+            h2 {
+                font-size: 2.3rem;
+                padding: 8px;
+                margin-top: 15px;
+            }
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px;
+                margin-top: 5px;
+                font-size: 1.2rem;
+                font-family: "Roboto", serif;
+                letter-spacing: 1px;
+
+            }
+
+        }
+    }
+
+    .macroeconomia {
+
+        /* background-color: rgb(164, 189, 255);*/
+        img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 10 0 #000;
+            margin-top: 5px;
+        }
+    }
+
+    .introduccion {
+        background-color: rgb(200, 215, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        width: 90%;
+        border-radius: 10px;
+
+        .description_introducion {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+                font-size: 2.3rem;
+                padding: 8px;
+                margin-top: 15px;
+            }
+
+            p {
+                width: 60%;
+                font-size: 1.19rem;
+                font-family: "Roboto", serif;
+                padding: 8px;
+                letter-spacing: 1px;
+                text-indent: 20px
+            }
+        }
+    }
+
+    .indicadores__economicos {
+
+        background-color: rgb(180, 200, 240);
+
+        img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 10 0 #000;
+            margin-top: 5px;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: rgb(24, 127, 175);
+        }
+    }
+
+    .crisis__economicas {
+        background-color: rgb(164, 189, 255);
+
+        img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 10 0 #000;
+            margin-top: 5px;
+        }
+
+    }
+
+    .politica__fiscal_monetraia {
+        img {
+            width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 10 0 #000;
+            margin-top: 5px;
+        }
+    }
+
+
+}
+.bibliografia{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    p{
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #d8d5d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 85px;
+
+        .footer__description {
+            h2 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        .footer__integrantes {
+            h3 {
+                font-size: 1.3rem;
+
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+
+}
+
+@keyframes show_title {
+    to {
+        
+        backdrop-filter: blur(5px);
+        font-size: 18px;
+    }
+    
+}

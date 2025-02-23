@@ -1,2 +1,2 @@
 # BlogEducativo
-Blog Educativo sobre la .acroeconomía
+Blog Educativo sobre la macroeconomía
